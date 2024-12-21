@@ -94,10 +94,10 @@
       "value": "entity.generic.hurt"
     },
     "deathSound": {
-      "value": "entity.generic.death"
+      "value": "block.glass.break"
     },
     "stepSound": {
-      "value": ""
+      "value": "block.snow.step"
     },
     "raidCelebrationSound": {
       "value": ""

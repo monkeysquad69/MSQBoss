@@ -1,11 +1,31 @@
 {
-  "mod_elements": [],
+  "mod_elements": [
+    {
+      "name": "IceGolem",
+      "type": "animatedentity",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ice_golem",
+      "metadata": {
+        "files": [
+          "src/main/java/com/msq/boss/entity/model/IceGolemModel.java",
+          "src/main/resources/assets/msqboss/models/item/ice_golem_spawn_egg.json",
+          "src/main/resources/data/msqboss/forge/biome_modifier/ice_golem_biome_modifier.json",
+          "src/main/java/com/msq/boss/entity/IceGolemEntity.java",
+          "src/main/java/com/msq/boss/client/renderer/IceGolemRenderer.java"
+        ]
+      }
+    }
+  ],
   "variable_elements": [],
   "sound_elements": [],
   "tag_elements": {},
   "tab_element_order": {},
   "language_map": {
-    "en_us": {}
+    "en_us": {
+      "entity.msqboss.ice_golem": "Ice Golem",
+      "item.msqboss.ice_golem_spawn_egg": "Ice Golem Spawn Egg"
+    }
   },
   "foldersRoot": {
     "name": "~",
@@ -22,8 +42,11 @@
     "requiredMods": [],
     "dependencies": [],
     "dependants": [],
-    "mcreatorDependencies": [],
+    "mcreatorDependencies": [
+      "geckolib"
+    ],
     "currentGenerator": "forge-1.20.1",
+    "credits": "Created using mod maker MCreator - https://mcreator.net/about",
     "modElementsPackage": "com.msq.boss"
   },
   "mcreatorVersion": 202400342716

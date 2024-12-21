@@ -26,6 +26,9 @@ import java.util.Collection;
 import java.util.ArrayList;
 import java.util.AbstractMap;
 
+import com.msq.boss.init.MsqbossModItems;
+import com.msq.boss.init.MsqbossModEntities;
+
 @Mod("msqboss")
 public class MsqbossMod {
 	public static final Logger LOGGER = LogManager.getLogger(MsqbossMod.class);
@@ -36,6 +39,9 @@ public class MsqbossMod {
 		// End of user code block mod constructor
 		MinecraftForge.EVENT_BUS.register(this);
 		IEventBus bus = FMLJavaModLoadingContext.get().getModEventBus();
+
+		MsqbossModItems.REGISTRY.register(bus);
+		MsqbossModEntities.REGISTRY.register(bus);
 
 		// Start of user code block mod init
 		// End of user code block mod init

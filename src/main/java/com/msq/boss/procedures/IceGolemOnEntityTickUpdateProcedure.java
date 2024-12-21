@@ -1,33 +1,25 @@
 package com.msq.boss.procedures;
 
-import net.minecraftforge.fml.common.Mod;
-import net.minecraftforge.eventbus.api.SubscribeEvent;
-import net.minecraftforge.eventbus.api.Event;
-import net.minecraftforge.event.entity.living.LivingChangeTargetEvent;
-
-import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.entity.ai.attributes.Attributes;
+import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.Entity;
 
-import javax.annotation.Nullable;
+import com.msq.boss.entity.IceGolemEntity;
 
-@Mod.EventBusSubscriber
 public class IceGolemOnEntityTickUpdateProcedure {
-	@SubscribeEvent
-	public static void onEntitySetsAttackTarget(LivingChangeTargetEvent event) {
-		execute(event, event.getOriginalTarget(), event.getEntity());
-	}
-
-	public static void execute(Entity entity, Entity sourceentity) {
-		execute(null, entity, sourceentity);
-	}
-
-	private static void execute(@Nullable Event event, Entity entity, Entity sourceentity) {
-		if (entity == null || sourceentity == null)
+	public static void execute(Entity entity) {
+		if (entity == null)
 			return;
-		if (!(sourceentity instanceof Player)) {
-			entity.setSprinting(false);
+		if ((entity instanceof LivingEntity _livEnt ? _livEnt.getHealth() : -1) <= 5) {
+			if (entity instanceof IceGolemEntity animatable)
+				animatable.setTexture("angry_ice_golem");
+			if (entity instanceof LivingEntity _livingEntity2 && _livingEntity2.getAttributes().hasAttribute(Attributes.ATTACK_DAMAGE))
+				_livingEntity2.getAttribute(Attributes.ATTACK_DAMAGE).setBaseValue(7.5);
 		} else {
-			entity.setSprinting(true);
+			if (entity instanceof IceGolemEntity animatable)
+				animatable.setTexture("ice_golem");
+			if (entity instanceof LivingEntity _livingEntity4 && _livingEntity4.getAttributes().hasAttribute(Attributes.ATTACK_DAMAGE))
+				_livingEntity4.getAttribute(Attributes.ATTACK_DAMAGE).setBaseValue(5);
 		}
 	}
 }

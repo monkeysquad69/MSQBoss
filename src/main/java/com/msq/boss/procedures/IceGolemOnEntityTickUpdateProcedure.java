@@ -1,19 +1,33 @@
 package com.msq.boss.procedures;
 
+import net.minecraftforge.fml.common.Mod;
+import net.minecraftforge.eventbus.api.SubscribeEvent;
+import net.minecraftforge.eventbus.api.Event;
+import net.minecraftforge.event.entity.living.LivingChangeTargetEvent;
+
 import net.minecraft.world.entity.player.Player;
-import net.minecraft.world.entity.Mob;
 import net.minecraft.world.entity.Entity;
 
+import javax.annotation.Nullable;
+
+@Mod.EventBusSubscriber
 public class IceGolemOnEntityTickUpdateProcedure {
-	public static void execute(Entity entity) {
-		if (entity == null)
+	@SubscribeEvent
+	public static void onEntitySetsAttackTarget(LivingChangeTargetEvent event) {
+		execute(event, event.getOriginalTarget(), event.getEntity());
+	}
+
+	public static void execute(Entity entity, Entity sourceentity) {
+		execute(null, entity, sourceentity);
+	}
+
+	private static void execute(@Nullable Event event, Entity entity, Entity sourceentity) {
+		if (entity == null || sourceentity == null)
 			return;
-		if ((entity instanceof Mob _mobEnt ? (Entity) _mobEnt.getTarget() : null) instanceof Player) {
-			entity.setSprinting(true);
-			entity.setMaxUpStep(1);
-		} else {
+		if (!(sourceentity instanceof Player)) {
 			entity.setSprinting(false);
-			entity.setMaxUpStep((float) 0.3);
+		} else {
+			entity.setSprinting(true);
 		}
 	}
 }

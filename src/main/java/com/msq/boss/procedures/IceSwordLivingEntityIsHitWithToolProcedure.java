@@ -16,6 +16,7 @@ public class IceSwordLivingEntityIsHitWithToolProcedure {
 			entity.hurt(new DamageSource(world.registryAccess().registryOrThrow(Registries.DAMAGE_TYPE).getHolderOrThrow(DamageTypes.GENERIC)), 2);
 		} else {
 			entity.setTicksFrozen((int) (entity.getTicksFrozen() + 30));
+			entity.hurt(new DamageSource(world.registryAccess().registryOrThrow(Registries.DAMAGE_TYPE).getHolderOrThrow(DamageTypes.FREEZE)), 1);
 		}
 	}
 }

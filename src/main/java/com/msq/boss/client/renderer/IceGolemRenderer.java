@@ -18,7 +18,7 @@ import com.mojang.blaze3d.vertex.PoseStack;
 public class IceGolemRenderer extends GeoEntityRenderer<IceGolemEntity> {
 	public IceGolemRenderer(EntityRendererProvider.Context renderManager) {
 		super(renderManager, new IceGolemModel());
-		this.shadowRadius = 0.5f;
+		this.shadowRadius = 0.8f;
 	}
 
 	@Override

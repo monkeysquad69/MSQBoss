@@ -9,10 +9,28 @@
       "metadata": {
         "files": [
           "src/main/java/com/msq/boss/entity/model/IceGolemModel.java",
-          "src/main/resources/assets/msqboss/models/item/ice_golem_spawn_egg.json",
-          "src/main/resources/data/msqboss/forge/biome_modifier/ice_golem_biome_modifier.json",
           "src/main/java/com/msq/boss/entity/IceGolemEntity.java",
+          "src/main/resources/data/msqboss/forge/biome_modifier/ice_golem_biome_modifier.json",
+          "src/main/resources/assets/msqboss/models/item/ice_golem_spawn_egg.json",
           "src/main/java/com/msq/boss/client/renderer/IceGolemRenderer.java"
+        ]
+      }
+    },
+    {
+      "name": "IceGolemOnEntityTickUpdate",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ice_golem_on_entity_tick_update",
+      "metadata": {
+        "files": [
+          "src/main/java/com/msq/boss/procedures/IceGolemOnEntityTickUpdateProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
         ]
       }
     }

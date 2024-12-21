@@ -45,6 +45,7 @@ import net.minecraft.network.protocol.Packet;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.core.BlockPos;
 
+import com.msq.boss.procedures.IceGolemOnEntityTickUpdateProcedure;
 import com.msq.boss.init.MsqbossModEntities;
 
 public class IceGolemEntity extends PathfinderMob implements GeoEntity {
@@ -140,6 +141,7 @@ public class IceGolemEntity extends PathfinderMob implements GeoEntity {
 	@Override
 	public void baseTick() {
 		super.baseTick();
+		IceGolemOnEntityTickUpdateProcedure.execute(this);
 		this.refreshDimensions();
 	}
 

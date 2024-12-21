@@ -26,6 +26,7 @@ import java.util.Collection;
 import java.util.ArrayList;
 import java.util.AbstractMap;
 
+import com.msq.boss.init.MsqbossModTabs;
 import com.msq.boss.init.MsqbossModItems;
 import com.msq.boss.init.MsqbossModEntities;
 
@@ -42,6 +43,8 @@ public class MsqbossMod {
 
 		MsqbossModItems.REGISTRY.register(bus);
 		MsqbossModEntities.REGISTRY.register(bus);
+
+		MsqbossModTabs.REGISTRY.register(bus);
 
 		// Start of user code block mod init
 		// End of user code block mod init

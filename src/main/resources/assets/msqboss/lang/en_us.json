@@ -1,4 +1,6 @@
 {
   "entity.msqboss.ice_golem": "Ice Golem",
+  "item.msqboss.ice_sword": "Ice Sword",
+  "item.msqboss.ice_essence": "Ice Essence",
   "item.msqboss.ice_golem_spawn_egg": "Ice Golem Spawn Egg"
 }

@@ -33,21 +33,126 @@
           }
         ]
       }
+    },
+    {
+      "name": "IceEssence",
+      "type": "item",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ice_essence",
+      "metadata": {
+        "files": [
+          "src/main/java/com/msq/boss/item/IceEssenceItem.java",
+          "src/main/resources/assets/msqboss/models/item/ice_essence.json"
+        ]
+      }
+    },
+    {
+      "name": "IceGolemLootTable",
+      "type": "loottable",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ice_golem_loot_table",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/msqboss/loot_tables/entities/ice_golem.json"
+        ]
+      }
+    },
+    {
+      "name": "IceSword",
+      "type": "tool",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ice_sword",
+      "metadata": {
+        "files": [
+          "src/main/java/com/msq/boss/item/IceSwordItem.java",
+          "src/main/resources/assets/msqboss/models/item/ice_sword.json"
+        ]
+      },
+      "path": "~/Equipment"
+    },
+    {
+      "name": "IceSwordRecipe",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ice_sword_recipe",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/msqboss/recipes/ice_sword_recipe.json"
+        ]
+      },
+      "path": "~/Equipment"
+    },
+    {
+      "name": "IceSwordLivingEntityIsHitWithTool",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ice_sword_living_entity_is_hit_with_tool",
+      "metadata": {
+        "files": [
+          "src/main/java/com/msq/boss/procedures/IceSwordLivingEntityIsHitWithToolProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Equipment"
+    },
+    {
+      "name": "IceSwordReminder",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ice_reminder",
+      "metadata": {
+        "files": [
+          "src/main/java/com/msq/boss/procedures/IceSwordReminderProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Equipment"
     }
   ],
   "variable_elements": [],
   "sound_elements": [],
-  "tag_elements": {},
+  "tag_elements": {
+    "ITEMS:minecraft:swords": [
+      "~CUSTOM:IceSword"
+    ]
+  },
   "tab_element_order": {},
   "language_map": {
     "en_us": {
       "entity.msqboss.ice_golem": "Ice Golem",
+      "item.msqboss.ice_sword": "Ice Sword",
+      "item.msqboss.ice_essence": "Ice Essence",
       "item.msqboss.ice_golem_spawn_egg": "Ice Golem Spawn Egg"
     }
   },
   "foldersRoot": {
     "name": "~",
-    "children": []
+    "children": [
+      {
+        "name": "Equipment",
+        "children": []
+      }
+    ]
   },
   "workspaceSettings": {
     "modid": "msqboss",

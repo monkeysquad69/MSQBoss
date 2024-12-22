@@ -7,7 +7,7 @@
     },
     "showParticles": false,
     "actionSound": {
-      "value": "block.glass.break"
+      "value": ""
     },
     "igniteFire": false,
     "power": 1.0,

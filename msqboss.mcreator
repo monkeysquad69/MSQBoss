@@ -136,8 +136,8 @@
       "registry_name": "icicle_dagger",
       "metadata": {
         "files": [
-          "src/main/resources/assets/msqboss/models/item/icicle_dagger.json",
-          "src/main/java/com/msq/boss/item/IcicleDaggerItem.java"
+          "src/main/java/com/msq/boss/item/IcicleDaggerItem.java",
+          "src/main/resources/assets/msqboss/models/item/icicle_dagger.json"
         ]
       },
       "path": "~/Equipment"
@@ -156,6 +156,18 @@
           {
             "name": "entity",
             "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
           },
           {
             "name": "world",

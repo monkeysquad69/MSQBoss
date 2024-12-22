@@ -15,7 +15,7 @@ public class IceSwordLivingEntityIsHitWithToolProcedure {
 		if (entity.getType().is(TagKey.create(Registries.ENTITY_TYPE, new ResourceLocation("msqboss:ice_monsters")))) {
 			entity.hurt(new DamageSource(world.registryAccess().registryOrThrow(Registries.DAMAGE_TYPE).getHolderOrThrow(DamageTypes.GENERIC)), 2);
 		} else {
-			entity.setTicksFrozen((int) (entity.getTicksFrozen() + 30));
+			entity.setTicksFrozen((int) (entity.getTicksFrozen() + 60));
 			entity.hurt(new DamageSource(world.registryAccess().registryOrThrow(Registries.DAMAGE_TYPE).getHolderOrThrow(DamageTypes.GENERIC)), 1);
 		}
 	}

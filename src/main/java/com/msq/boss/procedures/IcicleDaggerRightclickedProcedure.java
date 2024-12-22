@@ -28,8 +28,8 @@ public class IcicleDaggerRightclickedProcedure {
 						return entityToSpawn;
 					}
 				}.getArrow(projectileLevel, entity, 5, 1);
-				_entityToSpawn.setPos(x, (y + 1), z);
-				_entityToSpawn.shoot((entity.getLookAngle().x), (entity.getLookAngle().y), (entity.getLookAngle().z), 1, 0);
+				_entityToSpawn.setPos(x, (y + 1.5), z);
+				_entityToSpawn.shoot((entity.getLookAngle().x), (entity.getLookAngle().y), (entity.getLookAngle().z), (float) 1.5, 0);
 				projectileLevel.addFreshEntity(_entityToSpawn);
 			}
 			if (entity instanceof Player _player)

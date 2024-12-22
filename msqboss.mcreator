@@ -136,8 +136,8 @@
       "registry_name": "icicle_dagger",
       "metadata": {
         "files": [
-          "src/main/java/com/msq/boss/item/IcicleDaggerItem.java",
-          "src/main/resources/assets/msqboss/models/item/icicle_dagger.json"
+          "src/main/resources/assets/msqboss/models/item/icicle_dagger.json",
+          "src/main/java/com/msq/boss/item/IcicleDaggerItem.java"
         ]
       },
       "path": "~/Equipment"
@@ -155,6 +155,10 @@
         "dependencies": [
           {
             "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "sourceentity",
             "type": "entity"
           },
           {
@@ -185,6 +189,7 @@
       "registry_name": "ice_cubes",
       "metadata": {
         "files": [
+          "src/main/java/com/msq/boss/client/renderer/IceCubesRenderer.java",
           "src/main/java/com/msq/boss/entity/IceCubesEntity.java"
         ]
       },

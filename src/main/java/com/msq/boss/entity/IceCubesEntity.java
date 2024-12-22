@@ -6,7 +6,6 @@ import net.minecraftforge.network.NetworkHooks;
 import net.minecraftforge.api.distmarker.OnlyIn;
 import net.minecraftforge.api.distmarker.Dist;
 
-import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.entity.projectile.ItemSupplier;
@@ -19,11 +18,12 @@ import net.minecraft.network.protocol.game.ClientGamePacketListener;
 import net.minecraft.network.protocol.Packet;
 
 import com.msq.boss.procedures.IceCubesProjectileHitsPlayerProcedure;
+import com.msq.boss.init.MsqbossModItems;
 import com.msq.boss.init.MsqbossModEntities;
 
 @OnlyIn(value = Dist.CLIENT, _interface = ItemSupplier.class)
 public class IceCubesEntity extends AbstractArrow implements ItemSupplier {
-	public static final ItemStack PROJECTILE_ITEM = new ItemStack(Blocks.ICE);
+	public static final ItemStack PROJECTILE_ITEM = new ItemStack(MsqbossModItems.ICICLE_DAGGER.get());
 
 	public IceCubesEntity(PlayMessages.SpawnEntity packet, Level world) {
 		super(MsqbossModEntities.ICE_CUBES.get(), world);
@@ -66,7 +66,7 @@ public class IceCubesEntity extends AbstractArrow implements ItemSupplier {
 	@Override
 	public void playerTouch(Player entity) {
 		super.playerTouch(entity);
-		IceCubesProjectileHitsPlayerProcedure.execute(this.level(), this.getX(), this.getY(), this.getZ(), entity);
+		IceCubesProjectileHitsPlayerProcedure.execute(this.level(), this.getX(), this.getY(), this.getZ(), entity, this.getOwner());
 	}
 
 	@Override

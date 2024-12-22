@@ -3,7 +3,7 @@
   "_type": "projectile",
   "definition": {
     "projectileItem": {
-      "value": "Blocks.ICE"
+      "value": "CUSTOM:IcicleDagger"
     },
     "showParticles": false,
     "actionSound": {
@@ -13,8 +13,8 @@
     "power": 1.0,
     "damage": 5.0,
     "knockback": 5,
-    "entityModel": "Default",
-    "customModelTexture": "",
+    "entityModel": "Modelicicle_dagger",
+    "customModelTexture": "icicle_dagger_projectile.png",
     "modelWidth": 0.5,
     "modelHeight": 0.5,
     "onHitsPlayer": {

@@ -9,9 +9,9 @@
       "metadata": {
         "files": [
           "src/main/java/com/msq/boss/entity/model/IceGolemModel.java",
-          "src/main/resources/assets/msqboss/models/item/ice_golem_spawn_egg.json",
-          "src/main/resources/data/msqboss/forge/biome_modifier/ice_golem_biome_modifier.json",
           "src/main/java/com/msq/boss/entity/IceGolemEntity.java",
+          "src/main/resources/data/msqboss/forge/biome_modifier/ice_golem_biome_modifier.json",
+          "src/main/resources/assets/msqboss/models/item/ice_golem_spawn_egg.json",
           "src/main/java/com/msq/boss/client/renderer/IceGolemRenderer.java"
         ]
       }
@@ -42,8 +42,8 @@
       "registry_name": "ice_essence",
       "metadata": {
         "files": [
-          "src/main/resources/assets/msqboss/models/item/ice_essence.json",
-          "src/main/java/com/msq/boss/item/IceEssenceItem.java"
+          "src/main/java/com/msq/boss/item/IceEssenceItem.java",
+          "src/main/resources/assets/msqboss/models/item/ice_essence.json"
         ]
       }
     },
@@ -136,8 +136,8 @@
       "registry_name": "icicle_dagger",
       "metadata": {
         "files": [
-          "src/main/java/com/msq/boss/item/IcicleDaggerItem.java",
-          "src/main/resources/assets/msqboss/models/item/icicle_dagger.json"
+          "src/main/resources/assets/msqboss/models/item/icicle_dagger.json",
+          "src/main/java/com/msq/boss/item/IcicleDaggerItem.java"
         ]
       },
       "path": "~/Equipment"
@@ -194,6 +194,10 @@
             "type": "entity"
           },
           {
+            "name": "itemstack",
+            "type": "itemstack"
+          },
+          {
             "name": "x",
             "type": "number"
           },
@@ -212,6 +216,29 @@
         ]
       },
       "path": "~/Equipment"
+    },
+    {
+      "name": "IcicleDaggerLivingEntityIsHitWithTool",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "icicle_dagger_living_entity_is_hit_with_tool",
+      "metadata": {
+        "files": [
+          "src/main/java/com/msq/boss/procedures/IcicleDaggerLivingEntityIsHitWithToolProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Equipment"
     }
   ],
   "variable_elements": [],
@@ -220,6 +247,9 @@
     "ITEMS:minecraft:swords": [
       "~CUSTOM:IcicleDagger",
       "~CUSTOM:IceSword"
+    ],
+    "ENTITIES:mod:ice_monsters": [
+      "CUSTOM:IceGolem"
     ]
   },
   "tab_element_order": {},

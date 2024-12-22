@@ -9,6 +9,8 @@ import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.client.event.EntityRenderersEvent;
 import net.minecraftforge.api.distmarker.Dist;
 
+import net.minecraft.client.renderer.entity.ThrownItemRenderer;
+
 import com.msq.boss.client.renderer.IceGolemRenderer;
 
 @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
@@ -16,5 +18,6 @@ public class MsqbossModEntityRenderers {
 	@SubscribeEvent
 	public static void registerEntityRenderers(EntityRenderersEvent.RegisterRenderers event) {
 		event.registerEntityRenderer(MsqbossModEntities.ICE_GOLEM.get(), IceGolemRenderer::new);
+		event.registerEntityRenderer(MsqbossModEntities.ICE_CUBES.get(), ThrownItemRenderer::new);
 	}
 }

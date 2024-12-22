@@ -24,6 +24,7 @@ public class MsqbossModTabs {
 		if (tabData.getTabKey() == CreativeModeTabs.COMBAT) {
 
 			tabData.accept(MsqbossModItems.ICE_SWORD.get());
+			tabData.accept(MsqbossModItems.ICICLE_DAGGER.get());
 
 		}
 	}

@@ -127,18 +127,105 @@
         ]
       },
       "path": "~/Equipment"
+    },
+    {
+      "name": "IcicleDagger",
+      "type": "tool",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "icicle_dagger",
+      "metadata": {
+        "files": [
+          "src/main/java/com/msq/boss/item/IcicleDaggerItem.java",
+          "src/main/resources/assets/msqboss/models/item/icicle_dagger.json"
+        ]
+      },
+      "path": "~/Equipment"
+    },
+    {
+      "name": "IceCubesProjectileHitsPlayer",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ice_cubes_projectile_hits_player",
+      "metadata": {
+        "files": [
+          "src/main/java/com/msq/boss/procedures/IceCubesProjectileHitsPlayerProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Equipment"
+    },
+    {
+      "name": "IceCubes",
+      "type": "projectile",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ice_cubes",
+      "metadata": {
+        "files": [
+          "src/main/java/com/msq/boss/entity/IceCubesEntity.java"
+        ]
+      },
+      "path": "~/Equipment"
+    },
+    {
+      "name": "IcicleDaggerRightclicked",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "icicle_dagger_rightclicked",
+      "metadata": {
+        "files": [
+          "src/main/java/com/msq/boss/procedures/IcicleDaggerRightclickedProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Equipment"
     }
   ],
   "variable_elements": [],
   "sound_elements": [],
   "tag_elements": {
     "ITEMS:minecraft:swords": [
+      "~CUSTOM:IcicleDagger",
       "~CUSTOM:IceSword"
     ]
   },
   "tab_element_order": {},
   "language_map": {
     "en_us": {
+      "item.msqboss.icicle_dagger": "Icicle Dagger",
       "entity.msqboss.ice_golem": "Ice Golem",
       "item.msqboss.ice_sword": "Ice Sword",
       "item.msqboss.ice_essence": "Ice Essence",

@@ -25,6 +25,10 @@ public class MsqbossModTabs {
 
 			tabData.accept(MsqbossModItems.ICE_SWORD.get());
 
+		} else if (tabData.getTabKey() == CreativeModeTabs.TOOLS_AND_UTILITIES) {
+
+			tabData.accept(MsqbossModItems.ICICLE_DAGGER.get());
+
 		}
 	}
 }

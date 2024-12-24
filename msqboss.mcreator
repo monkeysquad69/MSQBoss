@@ -256,6 +256,88 @@
         ]
       },
       "path": "~/Equipment"
+    },
+    {
+      "name": "BombProjectileHitsBlock",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "bomb_projectile_hits_block",
+      "metadata": {
+        "files": [
+          "src/main/java/com/msq/boss/procedures/BombProjectileHitsBlockProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Bomb",
+      "type": "projectile",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "bombs",
+      "metadata": {
+        "files": [
+          "src/main/java/com/msq/boss/client/renderer/BombRenderer.java",
+          "src/main/java/com/msq/boss/entity/BombEntity.java"
+        ]
+      }
+    },
+    {
+      "name": "Bombs",
+      "type": "item",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "bombs",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/msqboss/models/item/bombs.json",
+          "src/main/java/com/msq/boss/item/BombsItem.java"
+        ]
+      }
+    },
+    {
+      "name": "BombsRightclicked",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "bombs_rightclicked",
+      "metadata": {
+        "files": [
+          "src/main/java/com/msq/boss/procedures/BombsRightclickedProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          }
+        ]
+      }
     }
   ],
   "variable_elements": [],
@@ -272,6 +354,7 @@
   "tab_element_order": {},
   "language_map": {
     "en_us": {
+      "item.msqboss.bombs": "Bombs",
       "item.msqboss.icicle_dagger": "Icicle Dagger",
       "entity.msqboss.ice_golem": "Ice Golem",
       "item.msqboss.ice_sword": "Ice Sword",

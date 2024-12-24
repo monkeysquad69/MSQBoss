@@ -14,6 +14,7 @@ import net.minecraft.world.item.Item;
 import com.msq.boss.item.IcicleDaggerItem;
 import com.msq.boss.item.IceSwordItem;
 import com.msq.boss.item.IceEssenceItem;
+import com.msq.boss.item.BombsItem;
 import com.msq.boss.MsqbossMod;
 
 public class MsqbossModItems {
@@ -22,6 +23,7 @@ public class MsqbossModItems {
 	public static final RegistryObject<Item> ICE_ESSENCE = REGISTRY.register("ice_essence", () -> new IceEssenceItem());
 	public static final RegistryObject<Item> ICE_SWORD = REGISTRY.register("ice_sword", () -> new IceSwordItem());
 	public static final RegistryObject<Item> ICICLE_DAGGER = REGISTRY.register("icicle_dagger", () -> new IcicleDaggerItem());
+	public static final RegistryObject<Item> BOMBS = REGISTRY.register("bombs", () -> new BombsItem());
 	// Start of user code block custom items
 	// End of user code block custom items
 }

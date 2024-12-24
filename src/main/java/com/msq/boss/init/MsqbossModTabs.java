@@ -21,7 +21,11 @@ public class MsqbossModTabs {
 
 	@SubscribeEvent
 	public static void buildTabContentsVanilla(BuildCreativeModeTabContentsEvent tabData) {
-		if (tabData.getTabKey() == CreativeModeTabs.COMBAT) {
+		if (tabData.getTabKey() == CreativeModeTabs.REDSTONE_BLOCKS) {
+
+			tabData.accept(MsqbossModItems.BOMBS.get());
+
+		} else if (tabData.getTabKey() == CreativeModeTabs.COMBAT) {
 
 			tabData.accept(MsqbossModItems.ICE_SWORD.get());
 			tabData.accept(MsqbossModItems.ICICLE_DAGGER.get());

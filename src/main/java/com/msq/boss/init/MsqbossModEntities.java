@@ -18,6 +18,7 @@ import net.minecraft.world.entity.Entity;
 
 import com.msq.boss.entity.IceGolemEntity;
 import com.msq.boss.entity.IceCubesEntity;
+import com.msq.boss.entity.BombEntity;
 import com.msq.boss.MsqbossMod;
 
 @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD)
@@ -29,6 +30,8 @@ public class MsqbossModEntities {
 					.sized(1f, 1.5f));
 	public static final RegistryObject<EntityType<IceCubesEntity>> ICE_CUBES = register("ice_cubes",
 			EntityType.Builder.<IceCubesEntity>of(IceCubesEntity::new, MobCategory.MISC).setCustomClientFactory(IceCubesEntity::new).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
+	public static final RegistryObject<EntityType<BombEntity>> BOMBS = register("bombs",
+			EntityType.Builder.<BombEntity>of(BombEntity::new, MobCategory.MISC).setCustomClientFactory(BombEntity::new).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.8f, 0.8f));
 
 	private static <T extends Entity> RegistryObject<EntityType<T>> register(String registryname, EntityType.Builder<T> entityTypeBuilder) {
 		return REGISTRY.register(registryname, () -> (EntityType<T>) entityTypeBuilder.build(registryname));

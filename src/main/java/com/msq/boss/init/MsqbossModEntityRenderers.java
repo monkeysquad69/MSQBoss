@@ -11,6 +11,7 @@ import net.minecraftforge.api.distmarker.Dist;
 
 import com.msq.boss.client.renderer.IceGolemRenderer;
 import com.msq.boss.client.renderer.IceCubesRenderer;
+import com.msq.boss.client.renderer.BombRenderer;
 
 @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
 public class MsqbossModEntityRenderers {
@@ -18,5 +19,6 @@ public class MsqbossModEntityRenderers {
 	public static void registerEntityRenderers(EntityRenderersEvent.RegisterRenderers event) {
 		event.registerEntityRenderer(MsqbossModEntities.ICE_GOLEM.get(), IceGolemRenderer::new);
 		event.registerEntityRenderer(MsqbossModEntities.ICE_CUBES.get(), IceCubesRenderer::new);
+		event.registerEntityRenderer(MsqbossModEntities.BOMBS.get(), BombRenderer::new);
 	}
 }

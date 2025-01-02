@@ -16,8 +16,10 @@ import net.minecraft.world.entity.MobCategory;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.Entity;
 
+import com.msq.boss.entity.SergentFrostEntity;
 import com.msq.boss.entity.IceGolemEntity;
 import com.msq.boss.entity.IceCubesEntity;
+import com.msq.boss.entity.FirebookEntity;
 import com.msq.boss.entity.BombEntity;
 import com.msq.boss.MsqbossMod;
 
@@ -32,6 +34,14 @@ public class MsqbossModEntities {
 			EntityType.Builder.<IceCubesEntity>of(IceCubesEntity::new, MobCategory.MISC).setCustomClientFactory(IceCubesEntity::new).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
 	public static final RegistryObject<EntityType<BombEntity>> BOMBS = register("bombs",
 			EntityType.Builder.<BombEntity>of(BombEntity::new, MobCategory.MISC).setCustomClientFactory(BombEntity::new).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.8f, 0.8f));
+	public static final RegistryObject<EntityType<SergentFrostEntity>> SERGEANT_FROST = register("sergeant_frost",
+			EntityType.Builder.<SergentFrostEntity>of(SergentFrostEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(SergentFrostEntity::new)
+
+					.sized(0.6f, 1.8f));
+	public static final RegistryObject<EntityType<FirebookEntity>> FIREBOOK = register("firebook",
+			EntityType.Builder.<FirebookEntity>of(FirebookEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(FirebookEntity::new)
+
+					.sized(0.6f, 1.8f));
 
 	private static <T extends Entity> RegistryObject<EntityType<T>> register(String registryname, EntityType.Builder<T> entityTypeBuilder) {
 		return REGISTRY.register(registryname, () -> (EntityType<T>) entityTypeBuilder.build(registryname));
@@ -41,11 +51,15 @@ public class MsqbossModEntities {
 	public static void init(FMLCommonSetupEvent event) {
 		event.enqueueWork(() -> {
 			IceGolemEntity.init();
+			SergentFrostEntity.init();
+			FirebookEntity.init();
 		});
 	}
 
 	@SubscribeEvent
 	public static void registerAttributes(EntityAttributeCreationEvent event) {
 		event.put(ICE_GOLEM.get(), IceGolemEntity.createAttributes().build());
+		event.put(SERGEANT_FROST.get(), SergentFrostEntity.createAttributes().build());
+		event.put(FIREBOOK.get(), FirebookEntity.createAttributes().build());
 	}
 }

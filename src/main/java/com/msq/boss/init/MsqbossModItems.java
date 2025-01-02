@@ -24,6 +24,8 @@ public class MsqbossModItems {
 	public static final RegistryObject<Item> ICE_SWORD = REGISTRY.register("ice_sword", () -> new IceSwordItem());
 	public static final RegistryObject<Item> ICICLE_DAGGER = REGISTRY.register("icicle_dagger", () -> new IcicleDaggerItem());
 	public static final RegistryObject<Item> BOMBS = REGISTRY.register("bombs", () -> new BombsItem());
+	public static final RegistryObject<Item> SERGEANT_FROST_SPAWN_EGG = REGISTRY.register("sergeant_frost_spawn_egg", () -> new ForgeSpawnEggItem(MsqbossModEntities.SERGEANT_FROST, -1, -1, new Item.Properties()));
+	public static final RegistryObject<Item> FIREBOOK_SPAWN_EGG = REGISTRY.register("firebook_spawn_egg", () -> new ForgeSpawnEggItem(MsqbossModEntities.FIREBOOK, -1, -1, new Item.Properties()));
 	// Start of user code block custom items
 	// End of user code block custom items
 }

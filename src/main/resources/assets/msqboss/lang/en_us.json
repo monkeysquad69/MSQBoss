@@ -1,8 +1,12 @@
 {
   "item.msqboss.bombs": "Bombs",
+  "entity.msqboss.sergeant_frost": "Sergeant Frost",
   "item.msqboss.icicle_dagger": "Icicle Dagger",
   "entity.msqboss.ice_golem": "Ice Golem",
+  "item.msqboss.sergeant_frost_spawn_egg": "Sergeant Frost Spawn Egg",
   "item.msqboss.ice_sword": "Ice Sword",
+  "entity.msqboss.firebook": "Firebook",
   "item.msqboss.ice_essence": "Ice Essence",
-  "item.msqboss.ice_golem_spawn_egg": "Ice Golem Spawn Egg"
+  "item.msqboss.ice_golem_spawn_egg": "Ice Golem Spawn Egg",
+  "item.msqboss.firebook_spawn_egg": "Firebook Spawn Egg"
 }

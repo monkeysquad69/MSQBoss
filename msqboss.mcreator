@@ -379,7 +379,8 @@
       "~CUSTOM:IceSword"
     ],
     "ENTITIES:mod:ice_monsters": [
-      "CUSTOM:IceGolem"
+      "CUSTOM:IceGolem",
+      "CUSTOM:SergentFrost"
     ]
   },
   "tab_element_order": {},

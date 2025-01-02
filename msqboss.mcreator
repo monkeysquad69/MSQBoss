@@ -9,9 +9,9 @@
       "metadata": {
         "files": [
           "src/main/java/com/msq/boss/entity/model/IceGolemModel.java",
-          "src/main/java/com/msq/boss/entity/IceGolemEntity.java",
-          "src/main/resources/data/msqboss/forge/biome_modifier/ice_golem_biome_modifier.json",
           "src/main/resources/assets/msqboss/models/item/ice_golem_spawn_egg.json",
+          "src/main/resources/data/msqboss/forge/biome_modifier/ice_golem_biome_modifier.json",
+          "src/main/java/com/msq/boss/entity/IceGolemEntity.java",
           "src/main/java/com/msq/boss/client/renderer/IceGolemRenderer.java"
         ]
       }
@@ -42,8 +42,8 @@
       "registry_name": "ice_essence",
       "metadata": {
         "files": [
-          "src/main/java/com/msq/boss/item/IceEssenceItem.java",
-          "src/main/resources/assets/msqboss/models/item/ice_essence.json"
+          "src/main/resources/assets/msqboss/models/item/ice_essence.json",
+          "src/main/java/com/msq/boss/item/IceEssenceItem.java"
         ]
       }
     },
@@ -136,8 +136,8 @@
       "registry_name": "icicle_dagger",
       "metadata": {
         "files": [
-          "src/main/resources/assets/msqboss/models/item/icicle_dagger.json",
-          "src/main/java/com/msq/boss/item/IcicleDaggerItem.java"
+          "src/main/java/com/msq/boss/item/IcicleDaggerItem.java",
+          "src/main/resources/assets/msqboss/models/item/icicle_dagger.json"
         ]
       },
       "path": "~/Equipment"
@@ -299,8 +299,8 @@
       "registry_name": "bombs",
       "metadata": {
         "files": [
-          "src/main/java/com/msq/boss/client/renderer/BombRenderer.java",
-          "src/main/java/com/msq/boss/entity/BombEntity.java"
+          "src/main/java/com/msq/boss/entity/BombEntity.java",
+          "src/main/java/com/msq/boss/client/renderer/BombRenderer.java"
         ]
       }
     },
@@ -312,8 +312,8 @@
       "registry_name": "bombs",
       "metadata": {
         "files": [
-          "src/main/resources/assets/msqboss/models/item/bombs.json",
-          "src/main/java/com/msq/boss/item/BombsItem.java"
+          "src/main/java/com/msq/boss/item/BombsItem.java",
+          "src/main/resources/assets/msqboss/models/item/bombs.json"
         ]
       }
     },
@@ -347,10 +347,10 @@
       "registry_name": "sergeant_frost",
       "metadata": {
         "files": [
-          "src/main/java/com/msq/boss/entity/model/SergentFrostModel.java",
-          "src/main/java/com/msq/boss/client/renderer/SergentFrostRenderer.java",
           "src/main/resources/assets/msqboss/models/item/sergeant_frost_spawn_egg.json",
-          "src/main/java/com/msq/boss/entity/SergentFrostEntity.java"
+          "src/main/java/com/msq/boss/entity/SergentFrostEntity.java",
+          "src/main/java/com/msq/boss/client/renderer/SergentFrostRenderer.java",
+          "src/main/java/com/msq/boss/entity/model/SergentFrostModel.java"
         ]
       }
     },
@@ -364,8 +364,8 @@
         "files": [
           "src/main/resources/data/msqboss/forge/biome_modifier/firebook_biome_modifier.json",
           "src/main/java/com/msq/boss/entity/FirebookEntity.java",
-          "src/main/java/com/msq/boss/entity/model/FirebookModel.java",
           "src/main/java/com/msq/boss/client/renderer/FirebookRenderer.java",
+          "src/main/java/com/msq/boss/entity/model/FirebookModel.java",
           "src/main/resources/assets/msqboss/models/item/firebook_spawn_egg.json"
         ]
       }
